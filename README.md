@@ -200,13 +200,17 @@ Sensors → Simulator → Backend API → Validation → Storage → Alerts → 
                  Alert Service
                         │
                         ▼
-                  ┌───────────────────┬─────────────┐
-                  │                   │             │
-                  ▼                   ▼             ▼
-                Email                SMS          Webhook
-                  │                   │              │
-                  ▼                   ▼              ▼
-    Ops / SRE / Plant Operators     Phone     SIEM / Slack / API
+                  ┌─────────────────┬──────────────┐
+                  │                 │              │
+                  ▼                 ▼              ▼
+                Email              SMS           Webhook
+                  │                 │              │
+                  ▼                 ▼              ▼
+       ┌─────────────────┐        Phone       ┌─────────┐   
+       |      Ops /      |                    | SIEM /  |
+       |      SRE /      |                    | Slack / |
+       | Plant Operators |                    | API     |
+       └─────────────────┘                    └─────────┘
 
 ---
 
