@@ -93,7 +93,14 @@ Open-IoT-Industry-Security/
 │   │   ├── models/
 │   │   │   └── sensor.py            # Sensor data models & schemas
 │   │   └── services/
-│   │       └── alert_service.py     # Alerting & notification logic
+│   │       ├── alert_service.py     # Alerting & notification logic
+│   │       └── notifier/               # NEW
+│   │           ├── __init__.py
+│   │           ├── email.py
+│   │           ├── sms.py
+│   │           └── webhook.py
+│   └── core/
+│   │   └── config.py               # extended
 │   ├── requirements.txt             # Backend dependencies
 │   └── Dockerfile                   # Backend container definition
 ├── dashboard/                       # Live monitoring dashboard (UI)
@@ -187,10 +194,19 @@ Sensors → Simulator → Backend API → Validation → Storage → Alerts → 
                         │               └─────────────────────────┘
                         │
                         ▼
-          ┌───────────────────────────┐
-          │   External Alert Channels │
-          │  (Email / SMS / Webhooks) │
-          └───────────────────────────┘
+                Threshold Breach
+                        │
+                        ▼
+                 Alert Service
+                        │
+                        ▼
+                  ┌───────────────────┬─────────────┐
+                  │                   │             │
+                  ▼                   ▼             ▼
+                Email                SMS          Webhook
+                  │                   │              │
+                  ▼                   ▼              ▼
+    Ops / SRE / Plant Operators     Phone     SIEM / Slack / API
 
 ---
 
