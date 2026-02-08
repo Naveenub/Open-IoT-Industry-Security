@@ -346,17 +346,21 @@ Only the ingestion layer changes — **the rest of the system stays the same**.
 🚀 **Advanced Capabilities**
 
 🔹 **LangChain + Vector DB (RAG)**
+
 Uses Retrieval-Augmented Generation to provide context-aware safety recommendations based on industrial knowledge.
 
 🔹 **AWS Cloud Integration**
+
 - AWS IoT Core for secure device ingestion
 - AWS SNS for SMS alerts
 - AWS SES for email notifications
 
 🔹 **Real-Time Dashboard**
+
 WebSocket-based live data streaming for instant visibility.
 
 🔹 **LLM Incident Reports**
+
 Automatically generates human-readable incident reports for operators, audits, and compliance.
 
 ---
