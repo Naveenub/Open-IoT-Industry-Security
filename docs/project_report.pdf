@@ -1,0 +1,101 @@
+Open loT lndustry Security Automation 
+ 
+Detailed Project Report 
+ 
+Real-time • Safety-first • Raspberry Pi ready • Dockerized • Open-source
+
+1. **Introduction** 
+ 
+ 
+Industrial environments such as manufacturing plants, warehouses, refineries, and power facilities are exposed to
+continuous safety risks. Fire outbreaks, toxic gas leaks, excessive heat, and poor environmental conditions can
+result in equipment damage, production downtime, and loss of human life. Traditional safety systems are often
+reactive, fragmented, and lack centralized visibility. 
+ 
+The need for real-time monitoring has become critical as industries scale and operate continuously. Internet of
+Things (IoT) based automation enables continuous sensing, intelligent decision-making, and rapid response. This
+project implements a modern Industrial IoT Security Automation platform designed to detect hazards early and
+provide live operational awareness.
+
+2. Objectives 
+ 
+ 
+The primary objective of this project is to design and implement a real-time industrial safety monitoring system
+using loT principles. The specific objectives include: 
+ 
+- Continuous real-time sensing of environmental and safety parameters
+- Automated alert generation for warning and critical conditions
+- Live monitoring dashboard for operators and safety teams
+- Edge and cloud ready system architecture
+- Open-source, modular, and extensible design
+
+3. System Architecture 
+ 
+ 
+The system follows a stream-based loT pipeline inspired by real industrial telemetry systems. Sensor data flows 
+continuously from edge devices to the backend services where it is validated, processed, stored, and visualized.
+The architecture diagram is provided in architecture.png. 
+ 
+The backend service handles sensor ingestion, threshold evaluation, data persistence, and alerting. The
+dashboard provides real-time visualization of sensor values and alerts. A simulator is included to generate test
+telemetry for development and validation.
+
+4. Technology Stack 
+ 
+ 
+Sensors: Flame sensor, CO/Gas sensor, Smoke sensor, DHT temperature and humidity sensor
+Backend: Python, FastAPI framework
+Frontend: React.js based dashboard
+Deployment: Docker and Docker Compose 
+Edge Devices: Raspberry Pi and compatible microcontrollers
+ 
+5. Implementation Details 
+ 
+ 
+Sensor data is ingested via HTTP REST endpoints in JSON format. Each reading includes a device ID, sensor
+type, value, and timestamp. Incoming data is validated for correctness and evaluated against predefined safety
+thresholds. 
+ 
+When a threshold breach is detected, alerts are generated and forwarded to external alert channels such as email,
+SMS, and webhooks. The frontend dashboard periodically polls the backend to display live sensor data and alert
+information.
+
+6. Results 
+ 
+ 
+The system successfully demonstrates real-time ingestion of sensor data and immediate alert generation for
+unsafe conditions. The live dashboard provides operators with continuous visibility into environmental
+conditions and system health. 
+ 
+During testing, simulated sensor data triggered warning and critical alerts as expected. The modular design
+ensures the system can be extended with minimal effort.
+
+7. Advantages 
+ 
+ 
+- Real-time monitoring and alerting
+- Modular and maintainable architecture
+- Scalable from small plants to large facilities
+- Cost-effective open-source solution
+- Edge and cloud deployment flexibility
+
+8. Future Enhancements 
+ 
+ 
+Future enhancements include WebSocket-based real-time data push, integration with time-series databases
+such as lnfluxDB or TimescaleDB, cloud-native alerting services, and machine
+learning-based anomaly detection for predictive safety monitoring.
+ 
+9. Conclusion 
+ 
+ 
+Open loT lndustry Security Automation demonstrates how modern loT and software engineering practices
+can significantly improve industrial safety. The project provides a robust, extensible, and productionoriented
+solution
+suitable
+for
+real-world
+deployment
+and
+future
+expansion.
