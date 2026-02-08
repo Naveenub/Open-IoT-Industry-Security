@@ -284,6 +284,7 @@ Only the ingestion layer changes — **the rest of the system stays the same**.
 📚 **Documentation**
 
 📊 System Architecture Diagram: `docs/architecture.png`
+
 📄 Detailed Project Report: `docs/project_report.pdf`
 
 ---
