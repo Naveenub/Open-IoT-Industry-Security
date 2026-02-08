@@ -1,0 +1,67 @@
+                     ┌───────────────────────────┐
+                     │      Physical Sensors     │
+                     │    Flame | CO | Smoke |   │
+                     │      Temp | Humidity      │
+                     └─────────────┬─────────────┘
+                                   │
+                                   ▼
+                     ┌───────────────────────────┐
+                     │     Edge Device Layer     │
+                     │  (Raspberry Pi / ESP32)   │
+                     └─────────────┬─────────────┘
+                                   │
+                     HTTP / JSON   ▼
+                ┌─────────────────────────────────────┐
+                │        Ingestion API (FastAPI)      │
+                │   /ingest  |  /sensors  |  /alerts  │
+                └──────────────────┬──────────────────┘
+                                   │
+                                   ▼
+                 ┌──────────────────────────────────┐
+                 │  Validation & Threshold Engine   │
+                 │  • Schema checks                 │
+                 │  • Range validation              │
+                 │  • Safety limits                 │
+                 └─────────────────┬────────────────┘
+                                   │
+                  Validated data   ▼
+                    ┌───────────────────────────────┐
+                    │ Time-Series Persistence Layer │
+                    │ (DB / In-Memory / Extendable) │
+                    └─────────────┬─────────────────┘
+                                  │
+                    ┌─────────────┴─────────────┐
+                    │                           │
+                    ▼                           ▼
+          ┌───────────────────┐     ┌───────────────────────┐
+          │   Alert Service   │     │     Query API Layer   │
+          │ • Warning         │     │ • Live sensor data    │
+          │ • Critical        │     │ • Historical metrics  │
+          │ • Notifications   │     └───────────┬───────────┘
+          └─────────┬─────────┘                 │
+                    │                           ▼
+                    │               ┌─────────────────────────┐
+                    │               │   Live Dashboard (UI)   │
+                    │               │  • Real-time graphs     │
+                    │               │  • Alerts panel         │
+                    │               │  • Zone status          │
+                    │               └─────────────────────────┘
+                    │
+                    ▼
+            Threshold Breach
+                    │
+                    ▼
+             Alert Service
+                    │
+                    ▼
+              ┌─────────────────┬──────────────┐
+              │                 │              │
+              ▼                 ▼              ▼
+            Email              SMS           Webhook
+              │                 │              │
+              ▼                 ▼              ▼
+   ┌─────────────────┐        Phone       ┌─────────┐   
+   |      Ops /      |                    | SIEM /  |
+   |      SRE /      |                    | Slack / |
+   | Plant Operators |                    | API     |
+   └─────────────────┘                    └─────────┘
