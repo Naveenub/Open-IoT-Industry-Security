@@ -1,85 +1,1106 @@
-Open loT lndustry Security Automation 
+**IOT BASED INDUSTRY SECURITY AUTOMATION**
+============================================================================= 
+CHAPTER-1
+INTRODUCTION
+1.1 Basic Description: 
+To control and monitor of different activities focused by Present innovations in technology. 
+To reach the human needs these are increasingly emerging. Most of this technology is focused on
+efficient monitoring and controlling different activities. To monitor and assess the conditions in case
+of exceeding the prescribed level of parameters (e.g., CO, Smoke, temperature and Humidity levels)
+an efficient environmental monitoring system is needed. In an environment when an object
+equipped with sensor devices, then in this case microcontroller and various software applications
+becomes a self-defending Self-monitoring and self-controlling environment and it is also called as
+smart environment. 
+To predict the behavior of a particular area of interest and to collect the data, the Sensor
+devices are placed at different locations. The main goal of the this paper is to design and implement
+an adequate monitoring system through which the needed parameters are monitored and controlled
+remotely by using internet and the data collected from the sensors are stored in the cloud and on the
+web browser to project the estimated trend. 
+A solution for monitoring the abnormal and CO levels i.e., any parameter value crossing its
+threshold value ranges, for example CO levels in air in a particular area exceeding the normal levels
+etc., in the environment using wireless embedded computing system is proposed in this paper. The
+solution also provides an intelligent remote monitoring for a particular area of interest. In this paper
+I also describe a trending results of sensed or collected data with respect to the ordinary as well as
+specified ranges of particular parameters. The embedded system enables the user to remotely access
+the various parameters and store the data in cloud and this system is an integration of sensor devices
+with wireless communication.  
+
+
+
+
+
+
+
+
+ 
+===================================================================   1 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+1.2 EXISTING SYSTEM WITH MODEL:- 
+In today’s world many pollution monitoring systems are designed by considering different 
+environmental parameters. Existing system model is presented in figure 1.1 uses Zigbee based
+wireless sensor networks to monitor physical and environmental conditions with thousands of
+application in different fields. The sensor nodes directly communicated with the moving nodes
+deployed on the object of interest which avoided the use of complex routing algorithm but local
+computations are very minimal. RFID is a means of storing and retrieving data through
+electromagnetic transmission to an RF compatible integrated circuit. It is basically used to track and
+label items in supermarkets and manufactories. There are two main components of RFID systems:
+tags and readers. A tag has an unique identification (ID) number and a memory which is used to
+store additional data such as manufacturer, product type, and environmental factors such as
+temperature, humidity, etc. Through Wireless Communication the reader is capable to write and/or
+read data to tags., In need of identification or tracking, tags are embedded or attached into objects in
+a typical RFID application. RFID tags can be classified into three major categories by their power
+source: active tags, passive tags, and semi passive (semi-active) tags are embedded or attached into
+objects in a typical RFID application. 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ADC  
+SENSOR 
+ZIGBEE 
+WEB 
+ MOU  
+BROWSER  
+RFID TAGS 
+DATABASE  
+SMART
+PHONE  
+MOBILE PHONE 
+SENSING 
+WEB 
+INTERNET  
+SERVICE  
+WSN 
+WSN  
+OTHER 
+MEASUREMENT  
+GATEWAY  
+ SERVER  
+LAN  
+WEBBASED  
+MONITORING 
+SYSTEM  
+ 
+Fig 1.1: Existing System Model  
+
+ 
+===================================================================   2 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-2 
+LITERATURE SURVEY 
+1.  C. Sai Venkata Sahadev, G.Vara Lakshmi, U.Ganesh, “IOT based Industrial Automation
+using      Raspberry Pi” in Volume 4  Issue 7 December 2020 
+2. Lo’ai Tawalbeh, Fadi Muheidat, Mais Tawalbeh and Muhannad Quwaider, “IoT Privacy and
+Security: Challenges and Solutions” is  Published on 15 June 2020 
+3. Sheetal Nagar, Govind Singh Patel, Seema Nayak, “A Review paper on ‘IOT’ & It’s
+Applications” is Published on Volume 13 Issue 4 – 2020
+4. Rohan Chandra Pandey, Manish Verma, Lumesh Kumar Sahu, “Internet of Things (IOT)  
+Based Gas Leakage Monitoring and Alerting System with MQ-2 Sensor” in Volume 5, Issue 2
+on the year 2017  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   3 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER 3
+A SOLUTION FOR THIS PROBLEM  
+The proposed model is for monitoring hazardous and CO levels in the atmosphere to make 
+the environment intelligent or interactive with the objects through wireless communication. The
+proposed model is shown in figure 3.1 which is more adaptable and distributive in nature to monitor
+the environmental parameters. 
+ 
+TEMPERATURE
+AND
+
+HUMIDITY
+ANALOG TO 
+DIGITAL
+CONVERTER 
+DISPLAY 
+
+
+
+
+
+
+
+
+ 
+GAS  
+SENSOR 
+RASPBERRY-PI  
+BUZZER 
+CO-2  
+SENSOR 
+LED’s 
+Flame  
+SENSOR 
+Fig 3.1: Re-designed System Model 
+
+Based on shown in figure 2, we have identified a suitable implementation model that
+consists of different sensor devices and other modules, their functionalities. In this implementation
+model we used Raspberry Pi board with Wi-Fi module is as embedded device for sensing and
+storing the data in cloud. Raspberry Pi board consist of analog input pins (A0-A5), digital output
+pins (D0- D13), inbuilt ADC and Wi-Fi module connects the embedded device to internet. Sensors
+are connected to Raspberry Pi board for monitoring, ADC will convert the corresponding sensor
+reading to its digital value and from that value the corresponding environmental parameter will be
+evaluated. The Wi-Fi connection has to be established to transfer sensors data to end user and also
+send it to the cloud storage for future usage. Before sending the sensed data to cloud, the data will
+be processed in MATLAB for analyze and visualize data to end user. The data analysis in
+MATLAB makes easier to us to set threshold level and to perform necessary controlling actions. 
+===================================================================   4 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+Carbon Monoxide (CO) sensor MQ-7 will record the air quality in that region, if the 
+threshold limit is crossed the corresponding controlling action will be taken (like issuing message
+alarm or buzzer or LED blink).All the sensor devices are connected to internet through Wi-Fi
+module.  
+It shows the embedded system with its components for reading and to store the pollution 
+parameters in cloud. After successful completion of sensing, the data will be processed and stored in
+database for future reference. After completing the analysis on data the threshold values will be set
+for controlling purpose. 
+CO levels in air at regular time intervals. All the above information will be stored in the
+cloud, so that we can provide trending of noise intensity and CO levels in a particular area at any
+point of time. 
+After sensing the data from different sensor devices, which are placed in particular area of
+interest. The sensed data will be automatically sent to the web server, when a proper connection is
+established with sever device. By entering IP address of server which is placed for monitoring we
+will get the corresponding web page. The web page gives the information about the intensity of
+sound and the CO level variations in that particular region, where the embedded monitoring system
+is placed. The sensed data will be stored in cloud (Google Spread Sheets). The data stored in cloud
+can be used for the analysis of the parameter and continuous monitoring purpose. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+===================================================================   5 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-4
+COMPONENTS 
+1. Flame Sensor
+2. CO Gas Sensor (MQ7) 
+3. Smoke Sensor (MQ2) 
+4. Temperature Sensor (DHT11) 
+5. Raspberry Pi
+6. LCD Display 
+7. LED’s 
+8. Rectifier 
+9. Resistors 
+10. Capacitors 
+11. Regulator (7805,7809, LD33) 
+12. PCB Board 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   6 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-5
+COMPONENT REQUIRED
+5.1. Hardware Description: 
+5.1.1 FLAME SENSOR:- 
+A flame sensor module that consists of a flame sensor, resistor, capacitor, potentiometer, 
+and comparator LM393 in an integrated circuit. It can detect infrared light with a wavelength
+ranging from 700nm to 1000nm.The far-infrared flame probe converts the strength changes
+of the external infrared light into current changes. It is applicable to all kinds of flame and
+can be used for fire detection (e.g. flame alarm).
+
+
+
+
+
+
+
+
+
+
+
+ 
+Fig 5.1: Flame Sensor  
+Features 
+ Equipped with a power light and a signal output indicator  
+ Support a detection angle of appr. 60 degrees; particularly sensitive to flame spectrum. 
+ Contain an adjustable precision potentiometer for sensitivity adjustment. 
+ With a comparator LM393 to output both digital and analog signals at the same time 
+ Connected directly with I/O port of MCU, needless of an external circuit 
+ Sensitive to flame, also responsive to general light; generally used for flame 
+ Detect flame or light of a wavelength ranging from 760 to 1100 nm. 
+ Output clean signals by a comparator, with good waveform and driving capability as
+strong as more than 15mA 
+ Working voltage: 3.3V - 5V 
+ 
+===================================================================   7 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.2 MQ7 CO GAS SENSOR:- 
+Carbon monoxide gas is a very dangerous, harmful, and toxic gas for the normal 
+environment. Since the gas has no color and is odorless, so it cannot be smelt or seen. So, if
+there is carbon monoxide gas in the surroundings, the person really would get no idea that
+they are breathing in CO until he/she feels not safe. So, it is necessary to have detected that
+toxic gas. Hence, there is an MQ7 gas detector sensor that can detect this harmful gas.
+Below is the complete description of this sensor. 
+ 
+ 
+ 
+ 
+ 
+Fig 5.2: CO Sensor(MQ 7)  
+ 
+Internal structure 
+The MQ7 alcohol sensor comprises a tin dioxide (SnO2), a perspective layer inside
+aluminum oxide micro-tubes (measuring electrodes), and a heating element inside a tubular
+casing. There is an enclosed stainless steel net at the end face of the sensor and the backside
+holds the connection terminals. 
+Specifications 
+ Temperature: 20°C ± 2°C 
+ Humidity: 65% ± 5% RH 
+ Standard Test Circuit: Vc: 5.0V ± 0.1V; Vh(high):5.0V±0.1V 
+ Vh(low): 1.5V±0.1V  
+ 
+===================================================================   8 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.3 SMOKE SENSOR (MQ2):- 
+
+
+
+
+
+
+
+
+The MQ-2 Gas sensor can detect or measure gasses like LPG, Alcohol, Propane, Hydrogen,
+CO, and even methane. The module version of this sensor comes with a Digital Pin which
+makes this sensor to operate even without a microcontroller and that comes in handy when
+you are only trying to detect one particular gas. When it comes to measuring the gas in ppm
+the analog pin has to be used, the analog pin also TTL driven and works on 5V and hence
+can be used with most common microcontrollers. So if you are looking for a sensor to detect
+or measure gasses like LPG, Alcohol, Propane, Hydrogen, CO and even methane with or
+without a microcontroller, then this sensor might be the right choice for you. 
+Fig 5.3: Smoke Sensor  
+Features 
+ Operating Voltage is +5V 
+ Can be used to Measure or detect LPG, Alcohol, Propane, Hydrogen, CO and even
+methane 
+ Analog output voltage: 0V to 5V 
+ Digital Output Voltage: 0V or 5V (TTL Logic) 
+ Preheat duration 20 seconds 
+ Can be used as a Digital or analog sensor 
+ The Sensitivity of Digital pin can be varied using the potentiometer 
+ 
+ 
+ 
+ 
+===================================================================   9 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.4 TEMPERATURE SENSOR (DHT11):-
+
+
+
+
+
+
+
+
+ 
+Fig 5.4: Temperature Sensor(DHT11)  
+ 
+The DHT11 is a commonly used Temperature and humidity sensor. The sensor 
+comes with a dedicated NTC to measure temperature and an 8-bit microcontroller to output
+the values of temperature and humidity as serial data. The sensor is also factory calibrated
+and hence easy to interface with other microcontrollers. 
+The sensor can measure temperature from 0°C to 50°C and humidity from 20% to 90% with
+an accuracy of ±1°C and ±1%. So if you are looking to measure in this range then this sensor
+might be the right choice for you. 
+The DHT11 is a commonly used Temperature and humidity sensor that comes with a
+dedicated NTC to measure temperature and an 8-bit microcontroller to output the values of
+temperature and humidity as serial data. 
+DHT11 Specifications 
+ Operating Voltage: 3.5V to 5.5V 
+ Operating current: 0.3mA (measuring) 60uA (standby) 
+ Output: Serial data 
+ Temperature Range: 0°C to 50°C 
+ Humidity Range: 20% to 90% 
+ Resolution: Temperature and Humidity both are 16-bit 
+ Accuracy: ±1°C and ±1% 
+ 
+===================================================================   10 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.5 RASPBERRY PI:- 
+Raspberry Pi is a series of small single-board computers (SBCs) developed in 
+the United Kingdom by the Raspberry Pi Foundation in association with Broadcom. The
+Raspberry Pi project originally leaned towards the promotion of teaching basic computer
+science in schools and in developing countries. The original model became more popular
+than anticipated, selling outside its target market for uses such as robotics. It is widely used
+in many areas, such as for weather monitoring, because of its low cost, modularity, and open
+design. It is typically used by computer and electronic hobbyists, due to its adoption of
+the HDMI and USB standards. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 5.5: Raspberry Pi  
+ 
+After the release of the second board type, the Raspberry Pi Foundation set up a new 
+entity, named Raspberry Pi Trading, and installed Eben Upton as CEO, with the
+responsibility of developing technology. The Foundation was rededicated as an educational
+charity for promoting the teaching of basic computer science in schools and developing 
+===================================================================   11 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+countries. Most Pis are made in a Sony factory in Pencoed, Wales, while others are made in
+China and Japan. 
+Specifications:-
+ 
+ Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+ 1GB, 2GB, 4GB or 8GB LPDDR4-3200 SDRAM (depending on model)
+ 2.4 GHz and 5.0 GHz IEEE 802.11ac wireless, Bluetooth 5.0, BLE
+ Gigabit Ethernet
+ 2 USB 3.0 ports; 2 USB 2.0 ports.
+ Raspberry Pi standard 40 pin GPIO header (fully backwards compatible with
+previous boards)
+ 2 × micro-HDMI ports (up to 4kp60 supported)
+ 2-lane MIPI DSI display port
+ 2-lane MIPI CSI camera port
+ 4-pole stereo audio and composite video port
+ H.265 (4kp60 decode), H264 (1080p60 decode, 1080p30 encode)
+ OpenGL ES 3.1, Vulkan 1.0
+ Micro-SD card slot for loading operating system and data storage
+ 5V DC via USB-C connector (minimum 3A*)
+ 5V DC via GPIO header (minimum 3A*)
+ Power over Ethernet (PoE) enabled (requires separate PoE HAT)
+ Operating temperature: 0 – 50 degrees C ambient 
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   12 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.6 LIQUID CRYSTAL DISPLAY:- 
+A liquid-crystal display (LCD) is a flat-panel display or other electronically modulated 
+optical device that uses the light-modulating properties of liquid crystals combined
+with polarizers. Liquid crystals do not emit 
+light directly, instead using 
+a backlight or reflector to produce images in colour or monochrome. LCDs are available to
+display arbitrary images (as in a general-purpose computer display) or fixed images with low
+information content, which can be displayed or hidden. For instance: preset words, digits,
+and seven-segment displays, as in a digital clock, are all good examples of devices with
+these displays. They use the same basic technology, except that arbitrary images are made
+from a matrix of small pixels, while other displays have larger elements. LCDs can either be
+normally on (positive) or off (negative), depending on the polarizer arrangement. Optical
+filters are added to white on blue LCDs to give them their characteristic appearance. 
+Specification:- 
+ 
+ 
+ 
+ 
+Fig 5.6: Liquid Crystal Display 
+ Resolution The resolution of an LCD is expressed by the number of columns and rows
+of pixels (e.g., 1024×768). Each pixel is usually composed 3 sub-pixels, a red, a green,
+and a blue one.  
+ Spatial performance: For a computer monitor or some other display that is being
+viewed from a very close distance, resolution is often expressed in terms of dot pitch or
+pixels per inch, which is consistent with the printing industry.  
+ Temporal performance: the temporal resolution of an LCD is how well it can display
+changing images, or the accuracy and the number of times per second the display draws
+the data it is being given.  
+===================================================================   13 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+ Color performance: There are multiple terms to describe different aspects of color
+performance of a display. Color gamut is the range of colors that can be displayed, and
+color depth, which is the fineness with which the color range is divided.  
+ Brightness and contrast ratio: Contrast ratio is the ratio of the brightness of a full-on
+pixel to a full-off pixel. The LCD itself is only a light valve and does not generate light;
+the light comes from a backlight that is either fluorescent or a set of LEDs. Brightness is
+usually stated as the maximum light output of the LCD, which can vary greatly based on
+the transparency of the LCD and the brightness of the backlight. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   14 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.7 LIGHT EMITTING DIODE:- 
+A light-emitting diode (LED) is a semiconductor light source that emits light when 
+current flows through it. Electrons in the semiconductor recombine with electron holes,
+releasing energy in the form of photons (Energy packets). The color of the light
+(corresponding to the energy of the photons) is determined by the energy required for
+electrons to cross the band gap of the semi-conductor. White light is obtained by using
+multiple semiconductors or a layer of light-emitting phosphor on the semiconductor device.
+Appearing as practical electronic components in 1962, the earliest LEDs emitted lowintensity
+infrared
+(IR)
+light.
+Infrared
+LEDs
+are
+used
+in
+remote-control
+circuits,
+such
+as
+those
+
+used
+with
+a
+wide
+variety
+of
+consumer
+electronics.
+The
+first
+visible-light
+LEDs
+were
+of
+low
+
+intensity
+and
+limited
+to
+red.
+Early
+LEDs
+were
+often
+used
+as
+indicator
+lamps,
+replacing
+small
+
+incandescent
+
+bulbs, and in seven-segment displays. Later developments produced LEDs
+available in visible, ultraviolet (UV), and infrared wavelengths, with high, low, or
+intermediate light output, for instance white LEDs suitable for room and outdoor area
+lighting. LEDs have also given rise to new types of displays and sensors, while their high
+switching rates are useful in advanced communications technology with applications as
+diverse as aviation lighting, fairy lights, automotive headlamps, advertising, general lighting,
+traffic signals, camera flashes, lighted wallpaper, horticultural grow lights, and medical
+devices.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+Fig 5.7: LED’s  
+===================================================================   15 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.8 RECTIFIER:- 
+A rectifier is an electrical device that converts alternating current (AC), which 
+periodically reverses direction, to direct current (DC), which flows in only one direction.
+The reverse operation is performed by the inverter.
+The process is known as rectification, since it "straightens" the direction of current.
+Physically, rectifiers take a number of forms, including vacuum tube diodes, wet chemical
+cells, mercury-arc valves, stacks of copper and selenium oxide plates, semiconductor diodes,
+silicon-controlled rectifiers and other silicon-based semiconductor switches. Historically,
+even synchronous electromechanical switches and motor-generator sets have been used. 
+
+
+
+
+
+
+
+
+
+
+Early radio receivers, called crystal radios, used a "cat's whisker" of fine wire pressing
+on a crystal of galena (lead sulfide) to serve as a point-contact rectifier or "crystal detector".
+Rectifiers have many uses, but are often found serving as components of DC power supplies
+and high-voltage direct current power transmission systems. Rectification may serve in roles
+other than to generate direct current for use as a source of power. As noted, detectors of
+radio signals serve as rectifiers. In gas heating systems flame rectification is used to detect
+presence of a flame.
+Depending on the type of alternating current supply and the arrangement of the
+rectifier circuit, the output voltage may require additional smoothing to produce a uniform
+steady voltage. Many applications of rectifiers, such as power supplies for radio, television
+and computer equipment, require a steady constant DC voltage (as would be produced by a
+battery). In these applications the output of the rectifier is smoothed by an electronic filter,
+which may be a capacitor, choke, or set of capacitors, chokes and resistors, possibly
+followed by a voltage regulator to produce a steady voltage.
+ 
+Fig 5.8: Rectifier  
+===================================================================   16 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.9 RESISTOR:- 
+A resistor is a passive two-terminal electrical component that implements electrical 
+resistance as a circuit element. In electronic circuits, resistors are used to reduce current
+flow, adjust signal levels, to divide voltages, bias active elements, and terminate
+transmission lines, among other uses. High-power resistors that can dissipate many watts of
+electrical power as heat may be used as part of motor controls, in power distribution
+systems, or as test loads for generators. Fixed resistors have resistances that only change
+slightly with temperature, time or operating voltage. Variable resistors can be used to adjust
+circuit elements (such as a volume control or a lamp dimmer), or as sensing devices for heat,
+light, humidity, force, or chemical activity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resistors are common elements of electrical networks and electronic circuits and are
+ubiquitous in electronic equipment. Practical resistors as discrete components can be
+composed of various compounds and forms. Resistors are also implemented within
+integrated circuits.
+The electrical function of a resistor is specified by its resistance: common commercial
+resistors are manufactured over a range of more than nine orders of magnitude. The nominal
+value of the resistance falls within the manufacturing tolerance, indicated on the component. 
+Fig 5.9: Resistor  
+===================================================================   17 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.10  CAPACITOR:- 
+A capacitor is a device that stores electrical energy in an electric field. It is a passive 
+electronic component with two terminals.
+The effect of a capacitor is known as capacitance. While some capacitance exists between
+any two electrical conductors in proximity in a circuit, a capacitor is a component designed
+to add capacitance to a circuit. The capacitor was originally known as a condenser or
+condensator. This name and its cognates are still widely used in many languages, but rarely
+in English, one notable exception being condenser microphones, also called capacitor
+microphones.
+
+
+
+
+
+
+
+
+
+The physical form and construction of practical capacitors vary widely and many types
+of capacitor are in common use. Most capacitors contain at least two electrical conductors
+often in the form of metallic plates or surfaces separated by a dielectric medium. A
+conductor may be a foil, thin film, sintered bead of metal, or an electrolyte. The
+nonconducting dielectric acts to increase the capacitor's charge capacity. Materials
+commonly used as dielectrics include glass, ceramic, plastic film, paper, mica, air, and oxide
+layers. Capacitors are widely used as parts of electrical circuits in many common electrical
+devices. 
+Unlike a resistor, an ideal capacitor does not dissipate energy, although real-life
+capacitors do dissipate a small amount (see Non-ideal behavior). When an electric potential
+difference (a voltage) is applied across the terminals of a capacitor, for example when a
+capacitor is connected across a battery, an electric field develops across the dielectric,
+causing a net positive charge to collect on one plate and net negative charge to collect on the
+other plate. No current actually flows through the dielectric. However, there is a flow of
+charge through the source circuit. If the condition is maintained sufficiently long, the current
+through the source circuit ceases.  
+Fig 5.10: Capacitor  
+===================================================================   18 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.11  REGULATOR 7805 IC:- 
+78xx (sometimes L78xx, LM78xx, MC78xx...) is a family of self-contained fixed linear 
+voltage regulator integrated circuits. The 78xx family is commonly used in electronic
+circuits requiring a regulated power supply due to their ease-of-use and low cost. 
+For ICs within the 78xx family, the xx is replaced with two digits, indicating the 
+output voltage (for example, the 7805 has a 5-volt output, while the 7812 produces 12 volts).
+The 78xx line are positive voltage regulators: they produce a voltage that is positive relative
+to a common ground. There is a related line of 79xx devices which are complementary
+negative voltage regulators. 78xx and 79xx ICs can be used in combination to provide
+positive and negative supply voltages in the same circuit.  
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 5.11: Regulator  
+ 
+These devices support an input voltage anywhere from around 2.5 volts over the 
+intended output voltage up to a maximum of 35 to 40 volts depending on the model, and
+typically provide 1 or 1.5 amperes of current (though smaller or larger packages may have a
+lower or higher current rating).  
+There are common configurations for 78xx ICs, including 7805 (5 V), 7806 (6 V), 
+7808 (8 V), 7809 (9 V), 7810 (10 V), 7812 (12 V), 7815 (15 V), 7818 (18 V), and 7824 (24
+V) versions. The 7805 is the most common, as its regulated 5-volt supply provides a
+convenient power source for most TTL components. 
+Less common are lower-power versions such as the LM78Mxx series (500 mA) and 
+LM78Lxx series (100 mA) from National Semiconductor. Some devices provide slightly
+different voltages than usual, such as the LM78L62 (6.2 volts) and LM78L82 (8.2 volts) as
+well as the STMicroelectronics L78L33ACZ (3.3 volts). 
+ 
+===================================================================   19 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+5.1.12  PRINTED CIRCUIT BOARD:- 
+A printed circuit board (PCB) or printed wiring board (PWB) is a laminated sandwich 
+structure of conductive and insulating layers. PCBs have two complementary functions. The
+first is to affix electronic components in designated locations on the outer layers by means of
+soldering. The second is to provide reliable electrical connections (and also reliable open
+circuits) between the component's terminals in a controlled manner often referred to as PCB
+design. Each of the conductive layers is designed with an artwork pattern of conductors
+(similar to wires on a flat surface) that provides electrical connections on that conductive
+layer. Another manufacturing process adds vias, plated-through holes that allow
+interconnections between layers. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Fig 5.12: Printed Circuit Board 
+ 
+PCBs mechanically support electronic components using conductive pads in the shape 
+designed to accept the component's terminals, and also electrically connect them using
+traces, planes and other features etched from one or more sheet layers of copper laminated 
+===================================================================   20 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+onto and/or between sheet layers of a non-conductive substrate. Components are generally
+soldered onto the PCB to both electrically connect and mechanically fasten them to it. 
+Printed circuit boards are used in nearly all electronic products. Alternatives to PCBs 
+include wire wrap and point-to-point construction, both once popular but now rarely used.
+PCBs require additional design effort to lay out the circuit, but manufacturing and assembly
+can be automated. Electronic computer-aided design software is available to do much of the
+work of layout. Mass-producing circuits with PCBs is cheaper and faster than with other
+wiring methods, as components are mounted and wired in one operation. Large numbers of
+PCBs can be fabricated at the same time, and the layout only has to be done once. PCBs can
+also be made manually in small quantities, with reduced benefits. 
+PCBs can be single-sided (one copper layer), double-sided (two copper layers on 
+both sides of one substrate layer), or multi-layer (outer and inner layers of copper,
+alternating with layers of substrate). Multi-layer PCBs allow for much higher component
+density, because circuit traces on the inner layers would otherwise take up surface space
+between components. The rise in popularity of multilayer PCBs with more than two, and
+especially with more than four, copper planes was concurrent with the adoption of surface
+mount technology. However, multilayer PCBs make repair, analysis, and field modification
+of circuits much more difficult and usually impractical. 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   21 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-6
+WORKING OF THE PROJECT 
+In view of the daily chores of a household the monitoring of real time parameters is highly 
+beneficial for the sustenance of an organized and well informed standard of living. The parameters we are
+dealing here are different gases, dust, room temperatures and humidity present required for an ambient
+living. The respective sensors are being utilized for acquisition of the required data to be monitored. DHT11
+sensor has been used to monitor the room temperature and pressure. It is a 4 pins sensor of which 2 pins
+uses I2C protocol (SCL and SDA) which are connected to the respective I2C protocol supported pins on the
+Raspberry Pi. It is based on the piezo resistive technology. The parameters are then send to the Controller.
+MQ-2 sensor is a gas sensor which can detect the presence of combustible gases such as i-butane, LPG,
+hydrogen & methane. In this project, it is used mainly for detecting household LPG. The ionized
+constituents are detected by the sensing element, which creates a potential difference thus giving output in
+the form of current. 
+The concentration of the gas detected is then send to the Raspberry Pi. It has both the analog and
+the digital output but here we use the analog output which is connected to the analog pin of the controller.
+DHT11 sensor is used for measuring humidity and temperature of the surroundings. The sensor provides
+fully calibrated digital outputs for the measurements of the parameters. It sends a data of 40 bits both for
+the temperature and humidity which also includes the checksum byte (bit error check). It operates at a
+voltage of +5v and gives the digital output connected to any of the digital pin of the controller. The MQ-135
+gas sensor senses the gases like CO2, ammonia nitrogen, oxygen, alcohols, aromatic compounds, sulfide
+and smoke. The operating voltage of this gas sensor is from 2.5V to 5.0V. In the atmosphere we can find
+polluting gases, but the conductivity of gas sensor increases as the concentration of polluting gas increases.
+MQ-7 smoke sensor can be implementation to detect the smoke, benzene, steam and other harmful gases.
+It has potential to detect different harmful gases. The MQ-7 smoke sensor is low cost to purchase.
+Raspberry pi module is a Wi-Fi module, which the backbone of this project. Here it is used for connecting
+the Controller to an access point (Wi-Fi). This module has inbuilt set of Attention Commands which are
+required to configure the module. 
+Firstly we flash the Raspberry Pi module using the software then using the Attention Commands it
+is set in the Wi-Fi mode and then it is connected to a mobile hotspot or a Wi-Fi, which finally connects our
+microcontroller to the Wi_Fi. We create a channel (private) to view the changes in the parameters. 
+The data is displayed graphically on the channel. One can get the access to the channel by getting
+the user ID and the data is transmitted to the channel by using the write API key provided by the channel,
+which enables our microcontroller to send the data. It requires a time of 15ms to update the data.
+Raspberry Pi takes input from the sensors and is connected to the Wi-Fi with the help of the Wi-Fi module
+which enable it to transmit data to the channel. The whole processing required is done by the processor in 
+===================================================================   22 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+it. Starting with this project, first of all we flash the memory of the Wi-Fi module (Raspberry) to avoid any
+garbage values in our readings, then moving on to the next step we use some AT commands to set the
+module in the Wi-Fi mode and search for the available access points and then connect to any of them. If the
+module gets connected, it is well and good otherwise go back to the basic AT Commands then retry to
+connect which connects our Controller to the Wi- Fi. 
+Then the next step is for taking inputs from the respective sensors in the Controller, now after
+obtaining values from the sensors, we need to convert the 5 volt logic of Raspberry Pi to the 3.3 volt logic as
+the Wi-Fi module works in 3.3 volt logic, after doing that use the channel API key to transmit the data/ input
+from the sensor to the channel and display them graphically on the space provided by the channel and for
+more understanding the whole process has been depicted. In this the components used in the project are
+represented in the form of blocks and shows how we carried out our work. First of all using all the 4 types
+of sensors we collected data then this data is latched in the Raspberry Pi, then after performing all the basic
+requirements required by the Wi-Fi module, we connect our Controller to the access point and then finally
+we upload the data to the channel. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   23 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-7
+APPLICATIONS 
+• Roadside pollution Monitoring.
+• Industrial Perimeter Monitoring.
+• Site selection for reference monitoring stations.
+• Indoor Air Quality Monitoring.
+• Design server using IoT and upload data on that server with date and time.
+• To make this data available to the common man.
+• To set a danger limit on that server and inform authorities to take future actions for
+wellbeing.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+===================================================================   24 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-8
+EXPECTED OUTCOMES 
+• Noise pollution impacts millions of people on a daily basis. The most common health
+problem it causes is Noise Induced Hearing Loss(NIHL). Exposure to loud noise can also
+cause high blood pressure , heart disease, sleeping disturbance, and stress. These health
+problems can affect all age groups, especially children.
+• Benefits including Reduction premature mortality due to lower ozone concentrations,
+Reduction in acute myocardial infraction, Avoided hospital admissions for respiratory
+conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   25 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-9
+CONCLUSION 
+To implement this need to deploy the sensor devices in the environment   for   collecting   
+the   data   and   analysis. 
+ 
+By deploying sensor devices in the environment, we can bring the environment into real life 
+i.e. it can interact with other objects through  the network.  Then  the  collected data and  analysis
+results will be available to the end user through the Wi-Fi. The smart way to monitor environment
+and an efficient, low cost embedded system is presented with different models in this paper. The
+noise and air pollution monitoring system with Internet of Things (IoT) concept experimentally
+tested for monitoring two parameters. This model can be further expanded to monitor the
+developing cities and industrial zones for pollution monitoring. To protect the public health from
+pollution, this model provides an efficient and low cost solution for continuous monitoring of
+environment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+===================================================================   26 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+CHAPTER-10
+RESULT 
+
+
+
+
+
+
+
+
+
+
+                                                                                         
+ 
+Fig 10.1: Humidity Graph 
+Fig 10.2: Temperature graph 
+Fig 10.3: CO2 Result 
+===================================================================   27 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+ 
+Fig 10.4: Fire Result 
+
+ 
+ 
+ 
+Fig 10.5: Temperature and Humidity result 
+
+ 
+===================================================================   28 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
+ 
+IOT BASED INDUSTRY SECURITY AUTOMATION
+============================================================================= 
+REFERENCES 
+[1].  C. Sai Venkata Sahadev, G.Vara Lakshmi, U.Ganesh, “IOT based Industrial Automation
+using      Raspberry Pi” in Volume 4  Issue 7 December 2020 
+[2]. Lo’ai Tawalbeh, Fadi Muheidat, Mais Tawalbeh and Muhannad Quwaider, “IoT Privacy
+and Security: Challenges and Solutions” is  Published on 15 June 2020 
+[3]. Sheetal Nagar, Govind Singh Patel, Seema Nayak, “A Review paper on ‘IOT’ & It’s
+Applications” is Published on Volume 13 Issue 4 – 2020
+[4]. Rohan Chandra Pandey, Manish Verma, Lumesh Kumar Sahu, “Internet of Things (IOT)  
+Based Gas Leakage Monitoring and Alerting System with MQ-2 Sensor” in Volume 5, Issue 2
+on the year 2017 
+
   
-Detailed Project Report 
+===================================================================   29 | P a g e  
+ Department of Electronics and Communication Engineering, KLS – VDIT, Haliyal  
  
-Real-time • Safety-first • Raspberry Pi ready • Dockerized • Open-source
-
-1. Introduction 
- 
-Industrial environments such as manufacturing plants, warehouses, refineries, and power facilities are exposed to
-continuous safety risks. Fire outbreaks, toxic gas leaks, excessive heat, and poor environmental conditions can
-result in equipment damage, production downtime, and loss of human life. Traditional safety systems are often
-reactive, fragmented, and lack centralized visibility. 
- 
-The need for real-time monitoring has become critical as industries scale and operate continuously. Internet of
-Things (IoT) based automation enables continuous sensing, intelligent decision-making, and rapid response. This
-project implements a modern Industrial IoT Security Automation platform designed to detect hazards early and
-provide live operational awareness.
-
-2. Objectives 
- 
-The primary objective of this project is to design and implement a real-time industrial safety monitoring system
-using loT principles. The specific objectives include: 
- 
-- Continuous real-time sensing of environmental and safety parameters
-- Automated alert generation for warning and critical conditions
-- Live monitoring dashboard for operators and safety teams
-- Edge and cloud ready system architecture
-- Open-source, modular, and extensible design
-
-3. System Architecture 
- 
-The system follows a stream-based loT pipeline inspired by real industrial telemetry systems. Sensor data flows 
-continuously from edge devices to the backend services where it is validated, processed, stored, and visualized.
-The architecture diagram is provided in architecture.png. 
- 
-The backend service handles sensor ingestion, threshold evaluation, data persistence, and alerting. The
-dashboard provides real-time visualization of sensor values and alerts. A simulator is included to generate test
-telemetry for development and validation.
-
-4. Technology Stack 
- 
-Sensors: Flame sensor, CO/Gas sensor, Smoke sensor, DHT temperature and humidity sensor
-Backend: Python, FastAPI framework
-Frontend: React.js based dashboard
-Deployment: Docker and Docker Compose 
-Edge Devices: Raspberry Pi and compatible microcontrollers
- 
-5. Implementation Details 
-  
-Sensor data is ingested via HTTP REST endpoints in JSON format. Each reading includes a device ID, sensor
-type, value, and timestamp. Incoming data is validated for correctness and evaluated against predefined safety
-thresholds. 
- 
-When a threshold breach is detected, alerts are generated and forwarded to external alert channels such as email,
-SMS, and webhooks. The frontend dashboard periodically polls the backend to display live sensor data and alert
-information.
-
-6. Results  
- 
-The system successfully demonstrates real-time ingestion of sensor data and immediate alert generation for
-unsafe conditions. The live dashboard provides operators with continuous visibility into environmental
-conditions and system health. 
- 
-During testing, simulated sensor data triggered warning and critical alerts as expected. The modular design
-ensures the system can be extended with minimal effort.
-
-7. Advantages 
- 
-- Real-time monitoring and alerting
-- Modular and maintainable architecture
-- Scalable from small plants to large facilities
-- Cost-effective open-source solution
-- Edge and cloud deployment flexibility
-
-8. Future Enhancements 
- 
-Future enhancements include WebSocket-based real-time data push, integration with time-series databases
-such as lnfluxDB or TimescaleDB, cloud-native alerting services, and machine
-learning-based anomaly detection for predictive safety monitoring.
- 
-9. Conclusion 
- 
-Open loT lndustry Security Automation demonstrates how modern loT and software engineering practices
-can significantly improve industrial safety. The project provides a robust, extensible, and productionoriented
-solution suitable for real-world deployment and future expansion.
